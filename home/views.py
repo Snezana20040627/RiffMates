@@ -4,3 +4,12 @@ from django.http import HttpResponse
 def credits(request):
     content = "Nicky/nSnezana"
     return HttpResponse(content, content_type="text/plain")
+
+
+def news(request):
+    data = {"news":[
+        "RiffMates now has a new page!,"
+        "RiffMates has its first page"
+    ]}
+    return render(request, "news.html", data)
+
